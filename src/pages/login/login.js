@@ -3,7 +3,7 @@ import { UserData } from "./loginInfo";
 
 
 
-const login = () => {
+export const Login = () => {
     return El({
       element: "div",
       id: "login-user",
