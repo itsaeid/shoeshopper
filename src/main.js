@@ -1,5 +1,13 @@
-import '../style.css'
-import { FirstOnLoad } from './onloading/first'
+import './index.css';
+import 'flowbite';
+import { App } from "./App"
+import { router } from "./routers/router";
 
 
-document.getElementById("app").appendChild(FirstOnLoad());
+
+const root = document.getElementById("app");
+root.appendChild(App());
+router.resolve();
+
+
+
