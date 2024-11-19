@@ -2,9 +2,9 @@
   "users": [
     {
       "id": 1,
-      "name": "Your Name",
-      "email": "Your Email",
-      "password": "Your Password",
+      "name": "saeid",
+      "email": "saeid@gmail.com",
+      "password": "123456",
       "cart": [],
       "orders": [],
       "wishlist": []
