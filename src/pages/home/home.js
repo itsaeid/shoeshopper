@@ -11,25 +11,27 @@ export const home = async ()=> {
         console.log(user);
         return El ({
             element: "div",
-            className: "w-[414px]  h-[82px] flex flex-col items-center justify-center overflow-y-hidden scrollbar-hidden",
+            className: "bg-white h-[100vh] w-[428px] flex flex-col justify-start items-center gap-24",
             id: "home",
             children: [
                 El({
                     //header
                     element: "nav",
                     id: "top-header",
-                    className: "fixed flex w-[414px] h-[80px] top-0 justify- items-center px-[24px] bg-white z-10",
+                    className: "fixed flex w-[414px] h-[80px] top-0 justify-between items-center px-[24px] bg-white z-10",
                     children: [
                         El({
                             element: "div",
-                            className: "flex gap-4 justify-between items-center",
+                            className: "flex justify-between w-[100%] items-center",
                             children: [
                                 El({
+                                    //profile pic
                                     element: "img",
                                     className: "",
                                     src: "src/img/prof.png",
                                 }),
                                 El({
+                                    //user name in header
                                     element: "div",
                                     className: "flex flex-col",
                                     children: [
@@ -46,8 +48,9 @@ export const home = async ()=> {
                                     ]
                                 }),
                                 El({
+                                    //notication & heart button in header
                                     element: "div",
-                                    className: "flex gap-4",
+                                    className: "flex gap-4 w-[40%] justify-end",
                                     children: [
                                         El({
                                             element: "button",
@@ -73,6 +76,27 @@ export const home = async ()=> {
                                         })
                                         
                                     ],
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                El({
+                    //body start from here
+                    element: "div",
+                    className: "",
+                    children: [
+                        El({
+                            //serch box section
+                            element: "div",
+                            className: "",
+                            children: [
+                                El({
+                                    element: "input",
+                                    type: "text",
+                                    className: "w-[80%] h-[40px] text-gray rounded-lg z-10 p-4",
+                                    placeholder: "🔍 Search ...",
+                                    children: []
                                 })
                             ]
                         })
