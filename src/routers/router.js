@@ -11,19 +11,23 @@ import { home } from "../pages/home/home";
 
 export const router = new Navigo("/");
 
-const changePages = (target) => {
+export const changePages = (target) => {
     const root = document.getElementById("rootsEl");
     root.innerHTML = "";
     root.append(target())
 };
 
-const changePages2 = (target , item) => {
-    target(item).then((res) => {
-        const root = document.getElementById("rootsEl");
-        root.innerHTML = "";
-        root.append(res);
-    });
-};
+export const changePages2 = (target, item)=>{
+
+    target(item).then((res)=>{
+        
+    const root = document.getElementById("rootsEl");
+    root.innerHTML = "";
+    root.append(res);
+    })
+}
+
+
 router
     .on("/", ()=> {
         changePages(FirstOnLoad);
@@ -45,4 +49,5 @@ router
     })
     .on("/home", ()=>{
         changePages(home);
+        changePages2(home);
     })

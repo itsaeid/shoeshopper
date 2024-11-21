@@ -1,21 +1,24 @@
 {
-  "name": "shoestore",
+  "name": "vanilla-js-shoppingwebsite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "db": "json-server --watch db.json --static ./public --port 5200",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.15",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
     "vite": "^5.4.10"
   },
   "dependencies": {
-    "flowbite": "^2.5.2",
+    "flowbite": "^1.8.1",
+    "js-cookie": "^3.0.5",
+    "json-server": "^0.17.3",
     "navigo": "^8.11.1"
   }
 }
