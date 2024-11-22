@@ -4,7 +4,7 @@ import { router } from "../../routers/router";
 export function SecondSlide(){
     const slideTwo = El({
         element: "div",
-        className: "bg-white flex flex-col gap-[1px] h-[100vh] w-[428px] flex flex-col justify-start items-center gap-24",
+        className: "bg-white flex flex-col gap-[1px] h-[100vh] w-[428px] justify-start items-center gap-24",
         children: [
             El({
                 element: "img",

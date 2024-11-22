@@ -2,12 +2,14 @@ import { El } from "../../createElement";
 import { router } from "../../routers/router";
 import { productsData } from "../../api/productData";
 import getUserInfo from "../../api/userInfo";
+import renderProducts from "../../component/search/search";
 
 
 export const home = async ()=> {
     try{
         const data = await productsData();
         let user = await getUserInfo(1);
+        let search = await renderProducts();
         console.log(user);
         return El ({
             element: "div",
@@ -96,7 +98,7 @@ export const home = async ()=> {
                                     type: "text",
                                     className: "w-[80%] h-[40px] text-gray rounded-lg z-10 p-4",
                                     placeholder: "🔍 Search ...",
-                                    children: []
+                                    
                                 })
                             ]
                         })
