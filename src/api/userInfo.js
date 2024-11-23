@@ -1,5 +1,4 @@
-import { BASEURL } from "./BaseURL";
-
+import BASEURL from "./BaseURL";
 export const getUserInfo = async (userid) =>{
     try{
         const response = await fetch(`${BASEURL}/users/${userid}`);

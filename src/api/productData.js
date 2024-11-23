@@ -1,6 +1,5 @@
-import { BASEURL } from "./BaseURL";
-
-export const productsData = async () => {
+import BASEURL from "./BaseURL";
+const productsData = async () => {
     try {
       const res = await fetch(`${BASEURL}/Products`);
       if (!res.ok) throw new Error("Network response was not ok");

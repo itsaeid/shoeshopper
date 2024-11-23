@@ -1,5 +1,4 @@
 import './index.css';
-import 'flowbite';
 import { App } from "./App"
 import { router } from "./routers/router";
 

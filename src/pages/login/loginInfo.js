@@ -1,4 +1,4 @@
-import { BASEURL } from "../../api/BaseURL";
+import BASEURL from "../../api/BaseURL";
 import { router } from "../../routers/router";
 
 export const UserData = async (event) => {

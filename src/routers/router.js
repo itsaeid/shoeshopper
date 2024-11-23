@@ -5,8 +5,9 @@ import { FirstSlide } from "../pages/introSlides/slide1";
 import { SecondSlide } from "../pages/introSlides/slide2";
 import { ThirdSlide } from "../pages/introSlides/slide3";
 import { Login } from "../pages/login/login";
-import { home } from "../pages/home/home";
-
+import Home from "../pages/Home/home";
+import SearchProduct from "../component/search/search";
+import wishList from "../pages/wishlist/wishlistPage";
 
 
 export const router = new Navigo("/");
@@ -48,6 +49,12 @@ router
         changePages(Login);
     })
     .on("/home", ()=>{
-        changePages(home);
-        changePages2(home);
+        changePages(Home);
+        changePages2(Home);
+    })
+    .on("/search", ()=>{
+        changePages2(SearchProduct);
+    })
+    .on("/wishlist", ()=>{
+        changePages2(wishList);
     })

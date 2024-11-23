@@ -1,9 +1,9 @@
 import { El } from "../../createElement";
 import productsData from "../../api/productData";
-import { BASEURL } from "../../api/BaseURL";
+import BASEURL from "../../api/BaseURL";
 import { router } from "json-server";
 
-export async function SearchProduct (){
+const SearchProduct = async ()=>{
     const data = await productsData();
 
     try{
@@ -106,7 +106,7 @@ export async function SearchProduct (){
                                     element: "img",
                                     id: "product-search",
                                     className: "p-[24px] absolute w-[414px] top-[80px] flex flex-wrap justify-center gap-4 overflow-y-scroll no-scrollbar ",
-                                    children: [];
+                                    children: [],
 
                                 }),
                                 El({
@@ -143,3 +143,4 @@ export async function SearchProduct (){
         console.log(error)
     }
 }
+export default SearchProduct;
