@@ -1,7 +1,7 @@
 import { El } from "../../createElement";
 import productsData from "../../api/productData";
 import BASEURL from "../../api/BaseURL";
-import { router } from "json-server";
+import { router } from "../../routers/router";
 
 const SearchProduct = async ()=>{
     const data = await productsData();

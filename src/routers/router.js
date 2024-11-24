@@ -5,9 +5,17 @@ import { FirstSlide } from "../pages/introSlides/slide1";
 import { SecondSlide } from "../pages/introSlides/slide2";
 import { ThirdSlide } from "../pages/introSlides/slide3";
 import { Login } from "../pages/login/login";
-import Home from "../pages/Home/home";
 import SearchProduct from "../component/search/search";
 import wishList from "../pages/wishlist/wishlistPage";
+import { home } from "../pages/Home/home";
+import addidas from "../pages/filterProduct/adidas";
+import Nike from "../pages/filterProduct/nike";
+import Puma from "../pages/filterProduct/puma";
+import Reebok from "../pages/filterProduct/reebok";
+import Newbalance from "../pages/filterProduct/newbalance";
+import Asics from "../pages/filterProduct/asics";
+import Converse from "../pages/filterProduct/converse";
+
 
 
 export const router = new Navigo("/");
@@ -49,8 +57,8 @@ router
         changePages(Login);
     })
     .on("/home", ()=>{
-        changePages(Home);
-        changePages2(Home);
+        changePages(home);
+        changePages2(home);
     })
     .on("/search", ()=>{
         changePages2(SearchProduct);
@@ -58,3 +66,25 @@ router
     .on("/wishlist", ()=>{
         changePages2(wishList);
     })
+    .on("/adidas", ()=>{
+        changePages2(addidas);
+    })
+    .on("/nike", ()=>{
+        changePages2(Nike);
+    })
+    .on("/puma", ()=>{
+        changePages2(Puma);
+    })
+    .on("/reebok", ()=>{
+        changePages2(Reebok);
+    })
+    .on("/newbalance", ()=>{
+        changePages2(Newbalance);
+    })
+    .on("/asics", ()=>{
+        changePages2(Asics);
+    })
+    .on("/asics", ()=>{
+        changePages2(Converse);
+    })
+    

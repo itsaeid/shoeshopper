@@ -5,21 +5,21 @@ import getUserInfo from "../../api/userInfo";
 
 
 
-export const Home = async ()=> {
+export const home = async ()=> {
     try{
         const data = await productsData();
         let user = await getUserInfo(1);
 
         return El ({
             element: "div",
-            className: "bg-white h-[100vh] w-[428px] flex flex-col justify-start items-center gap-24",
+            className: "bg-white h-[100vh] w-[428px] box-border flex flex-col justify-start items-center gap-24",
             id: "home",
             children: [
                 El({
                     //header
                     element: "nav",
                     id: "top-header",
-                    className: "fixed flex w-[414px] h-[80px] top-0 justify-between items-center px-[24px] bg-white z-10",
+                    className: "flex w-[414px] h-[80px] top-0 justify-between items-center px-[24px] bg-white z-10",
                     children: [
                         El({
                             element: "div",
@@ -90,31 +90,199 @@ export const Home = async ()=> {
                 El({
                     //body start from here
                     element: "div",
-                    className: "",
+                    className: "box-border relative justify-center flex",
                     children: [
                         El({
                             //serch box section
                             element: "div",
-                            className: "p-[24px] fixed -mb-[472px] w-[414px] bg-white z-10 overflow-y-scroll scrollbar-hidden",
+                            className: "p-[5px] mt-[-80px] fixed w-[414px] bg-[#FAFAFA] rounded scrollbar-hidden",
                             children: [
                                 El({
                                     element: "input",
                                     type: "text",
-                                    className: "w-[80%] h-[40px] text-gray rounded-lg z-10 p-4",
+                                    className: "w-[100%] h-[40px] bg-[#FAFAFA] text-gray rounded-lg z-10 p-4",
                                     placeholder: "🔍 Search ...",
                                     onkeyup: ()=>{
                                         router.navigate("/search");
-                                        console.log(onkeyup)
+                                        console.log(onkeyup);
                                     },
                                 }),
                             ]
                         }),
+
+                        //brand icons
+                        El({
+                            element: "div",
+                            className: "flex gap-6 justify-between mt-[20px]",
+                            children: [
+                                El({
+                                    //first row
+                                    element: "div",
+                                    className: "flex flex-col justify-center",
+                                    children: [
+                                        El({
+                                            //nike
+                                            element: "img",
+                                            src: "src/img/nike-icon.png",
+                                            className: "bg-[#ECECEC] cursor-pointer p-[25px] rounded-[50%]",
+                                            onclick: ()=>{
+                                                router.navigate("/nike");
+                                            },
+                                        }),
+                                        El({
+                                            element: "span",
+                                            className: "text-center font-bold",
+                                            children: ["Nike"]
+                                        })
+                                    ]
+                                }),
+                                    El({
+                                    element: "div",
+                                    className: "flex flex-col justify-center",
+                                    children: [
+                                        El({
+                                            element: "img",
+                                            src: "src/img/addidas-icon.png",
+                                            className: "bg-[#ECECEC] cursor-pointer p-[25px] rounded-[50%]",
+                                            onclick: ()=>{
+                                                router.navigate("/adidas");
+                                            },
+                                        }),
+                                        El({
+                                            element: "span",
+                                            className: "text-center font-bold",
+                                            children: ["Adidas"]
+                                        })
+                                    ]
+                                }),
+                                El({
+                                    element: "div",
+                                    className: "flex flex-col justify-center",
+                                    children: [
+                                        El({
+                                            element: "img",
+                                            src: "src/img/nike-icon.png",
+                                            className: "bg-[#ECECEC] cursor-pointer p-[25px] rounded-[50%]",
+                                            onclick: ()=>{
+                                                router.navigate("/nike");
+                                            },
+                                        }),
+                                        El({
+                                            element: "span",
+                                            className: "text-center font-bold",
+                                            children: ["Puma"]
+                                        })
+                                    ]
+                                 }),
+                                   El({
+                                    element: "div",
+                                    className: "flex flex-col justify-center",
+                                    children: [
+                                        El({
+                                            element: "img",
+                                            src: "src/img/nike-icon.png",
+                                            className: "bg-[#ECECEC] cursor-pointer p-[25px] rounded-[50%]",
+                                            onclick: ()=>{
+                                                router.navigate("/nike");
+                                            },
+                                        }),
+                                        El({
+                                            element: "span",
+                                            className: "text-center font-bold",
+                                            children: ["Asics"]
+                                        })
+                                    ]
+                                }),
+                                //second row
+                                El({
+                                    //first row
+                                    element: "div",
+                                    className: "flex flex-col justify-center",
+                                    children: [
+                                        El({
+                                            //nike
+                                            element: "img",
+                                            src: "src/img/nike-icon.png",
+                                            className: "bg-[#ECECEC] cursor-pointer p-[25px] rounded-[50%]",
+                                            onclick: ()=>{
+                                                router.navigate("/nike");
+                                            },
+                                        }),
+                                        El({
+                                            element: "span",
+                                            className: "text-center font-bold",
+                                            children: ["Nike"]
+                                        })
+                                    ]
+                                }),
+                                    El({
+                                    element: "div",
+                                    className: "flex flex-col justify-center",
+                                    children: [
+                                        El({
+                                            element: "img",
+                                            src: "src/img/addidas-icon.png",
+                                            className: "bg-[#ECECEC] cursor-pointer p-[25px] rounded-[50%]",
+                                            onclick: ()=>{
+                                                router.navigate("/nike");
+                                            },
+                                        }),
+                                        El({
+                                            element: "span",
+                                            className: "text-center font-bold",
+                                            children: ["Adidas"]
+                                        })
+                                    ]
+                                }),
+                                El({
+                                    element: "div",
+                                    className: "flex flex-col justify-center",
+                                    children: [
+                                        El({
+                                            element: "img",
+                                            src: "src/img/nike-icon.png",
+                                            className: "bg-[#ECECEC] cursor-pointer p-[25px] rounded-[50%]",
+                                            onclick: ()=>{
+                                                router.navigate("/nike");
+                                            },
+                                        }),
+                                        El({
+                                            element: "span",
+                                            className: "text-center font-bold",
+                                            children: ["Puma"]
+                                        })
+                                    ]
+                                 }),
+                                   El({
+                                    element: "div",
+                                    className: "flex flex-col justify-center",
+                                    children: [
+                                        El({
+                                            element: "img",
+                                            src: "src/img/nike-icon.png",
+                                            className: "bg-[#ECECEC] cursor-pointer p-[25px] rounded-[50%]",
+                                            onclick: ()=>{
+                                                router.navigate("/nike");
+                                            },
+                                        }),
+                                        El({
+                                            element: "span",
+                                            className: "text-center font-bold",
+                                            children: ["Asics"]
+                                        })
+                                    ]
+                                }),
+                            ]
+                        })
                     ]
                 })
             ]
         });
+
+
     } catch (error){
         console.log(error);
     }
 }
-export default Home;
+
+export default home;
