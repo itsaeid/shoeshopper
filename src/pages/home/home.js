@@ -164,7 +164,7 @@ export const home = async ()=> {
                                             src: "src/img/nike-icon.png",
                                             className: "bg-[#ECECEC] cursor-pointer p-[25px] rounded-[50%]",
                                             onclick: ()=>{
-                                                router.navigate("/nike");
+                                                router.navigate("/puma");
                                             },
                                         }),
                                         El({
@@ -183,7 +183,7 @@ export const home = async ()=> {
                                             src: "src/img/nike-icon.png",
                                             className: "bg-[#ECECEC] cursor-pointer p-[25px] rounded-[50%]",
                                             onclick: ()=>{
-                                                router.navigate("/nike");
+                                                router.navigate("/asics");
                                             },
                                         }),
                                         El({
@@ -205,13 +205,13 @@ export const home = async ()=> {
                                             src: "src/img/nike-icon.png",
                                             className: "bg-[#ECECEC] cursor-pointer p-[25px] rounded-[50%]",
                                             onclick: ()=>{
-                                                router.navigate("/nike");
+                                                router.navigate("/reebok");
                                             },
                                         }),
                                         El({
                                             element: "span",
                                             className: "text-center font-bold",
-                                            children: ["Nike"]
+                                            children: ["Reebok"]
                                         })
                                     ]
                                 }),
@@ -224,13 +224,13 @@ export const home = async ()=> {
                                             src: "src/img/addidas-icon.png",
                                             className: "bg-[#ECECEC] cursor-pointer p-[25px] rounded-[50%]",
                                             onclick: ()=>{
-                                                router.navigate("/nike");
+                                                router.navigate("/newbalance");
                                             },
                                         }),
                                         El({
                                             element: "span",
                                             className: "text-center font-bold",
-                                            children: ["Adidas"]
+                                            children: ["Newbalance"]
                                         })
                                     ]
                                 }),
@@ -243,13 +243,13 @@ export const home = async ()=> {
                                             src: "src/img/nike-icon.png",
                                             className: "bg-[#ECECEC] cursor-pointer p-[25px] rounded-[50%]",
                                             onclick: ()=>{
-                                                router.navigate("/nike");
+                                                router.navigate("/converse");
                                             },
                                         }),
                                         El({
                                             element: "span",
                                             className: "text-center font-bold",
-                                            children: ["Puma"]
+                                            children: ["Converse"]
                                         })
                                     ]
                                  }),
