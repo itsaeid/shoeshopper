@@ -50,7 +50,7 @@ const Newbalance = async ()=> {
                     //getting product and filter newbalance
                     element: "div",
                     id: "adidasShoeContainer",
-                    className: "p-[24px] absolute w-[414px] top-[80px] flex flex-wrap justify-center gap-4 overflow-y-scroll scrollbar-hidden ",
+                    className: "p-[24px] w-[414px] flex flex-wrap justify-center gap-4 overflow-y-scroll scrollbar-hidden ",
                     children: data
                     .filter((item)=> item.brand === "newbalance")
                     .map((item)=>{

@@ -84,7 +84,7 @@ router
     .on("/asics", ()=>{
         changePages2(Asics);
     })
-    .on("/asics", ()=>{
+    .on("/converse", ()=>{
         changePages2(Converse);
     })
     
