@@ -10,12 +10,13 @@ import { FavProduct } from "../../api/whishListCard";
 export const productDetail = async (dataid) => {
   try {
     const data = await getOneProduct(dataid);
+    console.log(data)
     
     let user = await getUserInfo (1);
-    // console.log(user);
+    console.log(user);
 
     
-    El({
+    return El({
         element: "div",
         id: "productDetaildiv",
         className: "bg-white h-[100vh] w-[428px] box-border overflow-y-hidden scrollbar-hidden flex flex-col justify-start items-center gap-24",
@@ -49,7 +50,7 @@ export const productDetail = async (dataid) => {
                     El({
                         element: "img",
                         className: "w-full h-full object-contain",
-                        src: `${data.title}`,
+                        src: `${data.images}`,
                     }),
                 ],
             }),
@@ -279,80 +280,7 @@ export const productDetail = async (dataid) => {
               }),
 
 
-              El({
-                element: "div",
-                className: "flex w-[414px] gap-4 mt-6 items-center",
-                children: [
-                  El({
-                    element: "p",
-                    className: "font-[700] text-[18px]",
-                    children: ["Quantity"],
-                  }),
-                  El({
-                    element: "div",
-                    className:
-                      "bg-gray-200 flex justify-center items-center p-1 w-28 rounded-full gap-4",
-                    children: [
-                      El({
-                        element: "button",
-                        className: "font-[700] text-[26px]",
-                        children: [`−`],
-                        onclick: () => {
-                          reduceCounterShoe(data);
-                        },
-                      }),
-                      El({
-                        element: "p",
-                        id: "counterShoe",
-                        className: "font-[700] text-[18px]",
-                        children: `1`,
-                      }),
-                      El({
-                        element: "button",
-                        className: "font-[700] text-[26px]",
-                        children: [`+`],
-                        onclick: () => {
-                          increasCounterShoes(data);
-                        },
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-
-
-              El({
-                element: "div",
-                className: "w-[414px] px-6 flex justify-between py-8",
-                children: [
-                  El({
-                    element: "div",
-                    className: "",
-                    children: [
-                      El({
-                        element: "p",
-                        className: "",
-                        children: ["Total Price"],
-                      }),
-                      El({
-                        element: "p",
-                        id: "totalPriceShoe",
-                        className: "font-[700] text-[28px]",
-                        children: ["1600"],
-                      }),
-                    ],
-                  }),
-                  El({
-                    element: "button",
-                    className:
-                      "bg-black text-white h-16 w-60 flex justify-center items-center rounded-full",
-                    // onclick:()=>{
-      
-                    // },
-                    children: [`Add to Cart`],
-                  }),
-                ],
-              }),
+              
         ]
     })
 

@@ -373,7 +373,7 @@ const home = async () => {
                 //filter button main container
                 El({
                   element: "div",
-                  className: "flex gap-2 scroll-container overflow-x-scroll scrollbar-hide",
+                  className: "flex gap-2 scroll-container overflow-x-auto scrollbar-hide",
                   children: [
                     El({
                       //filter button all button
