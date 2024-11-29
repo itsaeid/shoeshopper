@@ -15,7 +15,7 @@ import Reebok from "../pages/filterProduct/reebok";
 import Newbalance from "../pages/filterProduct/newbalance";
 import Asics from "../pages/filterProduct/asics";
 import Converse from "../pages/filterProduct/converse";
-import productsData from "../api/productData";
+import productDetail from "../pages/productDetails/productDetails";
 
 
 
@@ -88,10 +88,7 @@ router
     .on("/converse", ()=>{
         changePages2(Converse);
     })
-    .on("/Products", ()=>{
-        changePages2(productsData);
-    })
-    .on("/Products/:brands", (params)=>{
-        changePages2(productsData, params);
+    .on("/singleproduct/:brands", (item)=>{
+        changePages2(productDetail, item.data.id);
     })
     

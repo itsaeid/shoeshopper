@@ -59,7 +59,7 @@ const home = async () => {
     return El({
       element: "div",
       className:
-        "bg-white h-[100vh] w-[428px] box-border flex flex-col justify-start items-center gap-24",
+        "bg-white h-[100vh] w-[428px] box-border overflow-y-hidden scrollbar-hidden flex flex-col justify-start items-center gap-24",
       id: "home",
       children: [
         //header
@@ -483,7 +483,7 @@ const home = async () => {
               element: "div",
               id: "products-home",
               className:
-                "p-[24px] w-[414px] flex flex-wrap justify-center gap-4 overflow-y-scroll scrollbar-hidden ",
+                "p-[24px] w-[414px] flex flex-wrap justify-center gap-4 overflow-y-scroll no-scrollbar",
               children: data.map((item) => {
                 return El({
                   element: "div",
@@ -527,8 +527,110 @@ const home = async () => {
             }),
             //bottom static menu 
             El({
-              
-            })
+              element: "nav",
+              id: "bottom-nav",
+              className:
+                "fixed flex w-[414px] h-[66px] bottom-0 justify-between px-[48px] bg-white z-10",
+              children: [
+                El({
+                  element: "button",
+                  id: "home-btn",
+                  className: " flex flex-col justify-center items-center",
+                  children: [
+                    El({
+                      element: "img",
+                      className: "w-[24px] h-[24px]",
+                      src: "./src/img/home-select.svg",
+                    }),
+                    El({
+                      element: "p",
+                      className: "text-[10px] font-[600]",
+                      children: "Home",
+                    }),
+                  ],
+                }),
+                El({
+                  element: "button",
+                  id: "cart-btn",
+                  className: " flex flex-col justify-center items-center",
+                  onclick: () => {
+                    Router().navigate("/cart");
+                  },
+                  children: [
+                    El({
+                      element: "img",
+                      className: "w-[24px] h-[24px]",
+                      src: "./src/img/cart.svg",
+                    }),
+                    El({
+                      element: "p",
+                      className: "text-[10px] font-[600]",
+                      children: "Cart",
+                    }),
+                  ],
+                }),
+                El({
+                  element: "button",
+                  id: "orders-btn",
+                  className: " flex flex-col justify-center items-center",
+                  onclick: () => {
+                    Router().navigate("/orders");
+                  },
+                  children: [
+                    El({
+                      element: "img",
+                      className: "w-[24px] h-[24px]",
+                      src: "./src/img/orders.svg",
+                    }),
+                    El({
+                      element: "p",
+                      className: "text-[10px] font-[600]",
+                      children: "Orders",
+                    }),
+                  ],
+                }),
+                El({
+                  element: "button",
+                  id: "Wallet-btn",
+                  className: " flex flex-col justify-center items-center",
+                  onclick: () => {
+                    Router().navigate("/wallet");
+                  },
+                  children: [
+                    El({
+                      element: "img",
+                      className: "w-[24px] h-[24px]",
+                      src: "./src/img/wallet.svg",
+                    }),
+                    El({
+                      element: "p",
+                      className: "text-[10px] font-[600]",
+                      children: "Wallet",
+                    }),
+                  ],
+                }),
+                El({
+                  element: "button",
+                  id: "profile-btn",
+                  className: " flex flex-col justify-center items-center",
+                  onclick: () => {
+                    Router().navigate("/profile");
+                  },
+                  children: [
+                    El({
+                      element: "img",
+                      className: "w-[24px] h-[24px]",
+                      src: "./src/img/profile.svg",
+                    }),
+                    El({
+                      element: "p",
+                      className: "text-[10px] font-[600]",
+                      children: "Profile",
+                    }),
+                  ],
+                }),
+              ],
+            }),
 
           ],
         }),

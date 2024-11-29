@@ -3,7 +3,7 @@ import getOneProduct from "../../api/getOneProduct";
 import { reduceCounterShoe } from "../../components/card/reduceCounterShoes";
 import { increasCounterShoes } from "../../components/card/increasCounterShoes";
 import { El } from "../../el/El";
-import { AddFavorites } from "../../api/postWhishListt";
+
 
 // let selectedcolor = "";
 export const productDetail = async (dataid) => {
