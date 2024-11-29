@@ -59,7 +59,7 @@ const home = async () => {
     return El({
       element: "div",
       className:
-        "bg-white h-[100vh] w-[428px] box-border overflow-y-hidden scrollbar-hidden flex flex-col justify-start items-center gap-24",
+        "bg-white h-[100vh] w-[428px] box-border overflow-y-scroll scrollbar-hidden flex flex-col justify-start items-center gap-24",
       id: "home",
       children: [
         //header

@@ -19,33 +19,40 @@ export const productDetail = async (dataid) => {
     return El({
         element: "div",
         id: "productDetaildiv",
-        className: "bg-white h-[100vh] w-[428px] box-border overflow-y-hidden scrollbar-hidden flex flex-col justify-start items-center gap-24",
+        className: "bg-white h-[100vh] w-[428px] box-border overflow-y-scroll scrollbar-hidden flex flex-col justify-start items-center gap-24",
         children: [
             //header
             El({
-                element: "button",
-                className: "flex items-center justify-start p-1 gap-[8px] border-black",
-                onclick: ()=>{
-                    history.back();
-                },
+                element: "div",
+                className: "flex justify-between items-center w-full mt-[10px]",
                 children: [
                     El({
-                        element: "img",
-                        className: "w-6 h-4 mt-[18px]",
-                        src: "../../src/img/back.png",
+                        element: "button",
+                        className: "flex items-center p-1 gap-[8px] border-black",
+                        onclick: ()=>{
+                            history.back();
+                        },
+                        children: [
+                            El({
+                                element: "img",
+                                className: "w-6 h-4 mt-[1px]",
+                                src: "../../src/img/back.png",
+                            }),
+                            El({
+                                element: "span",
+                                className: "text-[16px] font-bold text-black",
+                                children: ["Back"],
+                            })
+        
+                        ]
                     }),
-                    El({
-                        element: "span",
-                        className: "text-[16px] font-bold text-black",
-                        children: ["Back"],
-                    })
-
                 ]
             }),
+            
             //single product image
             El({
                 element: "div",
-                className: "",
+                className: "mt-[-80px] mb-0",
                 children: [
                     El({
                         element: "img",
@@ -57,15 +64,15 @@ export const productDetail = async (dataid) => {
             //product details
             El({
                 element: "div",
-                className: "",
+                className: "flex flex-col justify-center items-between mt-[-80px] mb-[10px]",
                 children: [
                     El({
                         element: "div",
-                        className: "",
+                        className: "flex gap-8",
                         children: [
                             El({
                                 element: "span",
-                                className: "text-[16px] font-bold text-black",
+                                className: "text-4xl font-bold text-black",
                                 children: [`${data.brand}`],
                             }),
                             El({
@@ -120,7 +127,7 @@ export const productDetail = async (dataid) => {
 
                     El({
                         element: "div",
-                        className: "w-[414px] flex gap-2 px-6 items-center",
+                        className: "w-[414px] mt-[20px] flex gap-2 px-6 items-center",
                         children: [
                             El({
                                 element: "div",
@@ -136,7 +143,7 @@ export const productDetail = async (dataid) => {
                             El({
                                 element: "img",
                                 className: "w-6",
-                                src: "src/img/star.svg",
+                                src: "/src/img/star.svg",
                             }),
                             El({
                                 element: "p",
@@ -151,13 +158,15 @@ export const productDetail = async (dataid) => {
             //decribe
             El({
                 element: "div",
-                className: "w-[414px] px-6 flex flex-col gap-3 py-10",
+                className: "w-[414px] px-6 mt-[-120px] flex flex-col gap-3 py-10",
                 children: [
+                    //description product title
                   El({
                     element: "p",
                     className: "font-[700] text-[18px]",
                     children: ["Description"],
                   }),
+                  //description product text
                   El({
                     element: "p",
                     className: "",
@@ -278,6 +287,82 @@ export const productDetail = async (dataid) => {
                   }),
                 ],
               }),
+            //quentity section
+            El({
+                element: "div",
+                className: "flex gap-2 px-8 mt-[-100px] items-center w-[414px]",
+                children: [
+                    El({
+                        element: "p",
+                        className: "text-2xl font-nprmal text-gray-900",
+                        children: ["Quantity"],
+                    }),
+                    //quentity counter button
+                    El({
+                        element: "div",
+                        className:
+                         "bg-gray-200 flex justify-center items-center p-1 w-28 rounded-full gap-4",
+                         children: [
+                            //minus button
+                            El({
+                                element: "button",
+                                className: "font-bold text-3xl",
+                                children: ["-"],
+                                onclick: ()=>{
+                                    decreaseCounterShoe(data);
+                                },
+                            }),
+                            //defualt quentity
+                            El({
+                                element: "p",
+                                className: "text-2xl font-bold text-gray-900",
+                                id: "counterShoe",
+                                children: ["1"],
+                            }),
+                            //plus button
+                            El({
+                                element: "button",
+                                className: "font-bold text-3xl",
+                                children: ["+"],
+                                onclick: ()=>{
+                                    increasCounterShoes(data);
+                                }
+                            })
+                         ]
+                    })
+                ]
+
+            }),
+
+            //price
+            El({
+                element: "div",
+                className: "w-[414px] px-6 flex justify-between py-8",
+                children: [
+                    El({
+                        element: "div",
+                        className: "",
+                        children: [
+                            El({
+                                element: "p",
+                                className: "text-2xl font-bold text-gray-900",
+                                children: ["Totall price"],
+                            }),
+                            El({
+                                element: "p",
+                                className: "font-bold text-3xl",
+                                id: "totalPriceShoe",
+                                children: ["1600"],
+                            })
+                        ]
+                    }),
+                    El({
+                        element: "button",
+                        className: "bg-black text-white h-16 w-60 flex justify-center items-center rounded-full",
+                        children: ["Add to cart"],
+                    })
+                ]
+            })
 
 
               
