@@ -7,7 +7,7 @@ import { ThirdSlide } from "../pages/introSlides/slide3";
 import { Login } from "../pages/login/login";
 import SearchProduct from "../component/search/search";
 import wishList from "../pages/wishlist/wishlistPage";
-import { home } from "../pages/Home/home";
+import home from "../pages/Home/home";
 import addidas from "../pages/filterProduct/adidas";
 import Nike from "../pages/filterProduct/nike";
 import Puma from "../pages/filterProduct/puma";
@@ -15,6 +15,7 @@ import Reebok from "../pages/filterProduct/reebok";
 import Newbalance from "../pages/filterProduct/newbalance";
 import Asics from "../pages/filterProduct/asics";
 import Converse from "../pages/filterProduct/converse";
+import productsData from "../api/productData";
 
 
 
@@ -86,5 +87,11 @@ router
     })
     .on("/converse", ()=>{
         changePages2(Converse);
+    })
+    .on("/Products", ()=>{
+        changePages2(productsData);
+    })
+    .on("/Products/:brands", (params)=>{
+        changePages2(productsData, params);
     })
     
