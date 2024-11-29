@@ -489,7 +489,7 @@ const home = async () => {
                   element: "div",
                   id: `${item.id}`,
                   onclick: () => {
-                    router.navigate(`/productDetail/${item.id}`);
+                    router.navigate(`/singleproduct/${item.id}`);
                   },
                   className: "w-30 h-40 bg-gray-200 shadow-lg rounded-3xl",
                   children: [

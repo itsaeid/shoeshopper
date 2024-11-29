@@ -7,7 +7,65 @@
       "password": "123456",
       "cart": [],
       "orders": [],
-      "wishlist": []
+      "wishlist": [
+        {
+          "id": 14,
+          "title": "asics",
+          "price": 100,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "asics",
+          "images": "http://localhost:5200/products/asics/6.webp"
+        },
+        {
+          "id": 10,
+          "title": "asics",
+          "price": 142,
+          "order": 0,
+          "size": [
+            44,
+            42,
+            40
+          ],
+          "color": [
+            "rose",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "asics",
+          "images": "http://localhost:5200/products/asics/2.webp"
+        },
+        {
+          "id": 3,
+          "title": "adidas",
+          "price": 110,
+          "order": 0,
+          "size": [
+            44,
+            43,
+            40
+          ],
+          "color": [
+            "red",
+            "emerald",
+            "teal",
+            "gray"
+          ],
+          "brand": "adidas",
+          "images": "http://localhost:5200/products/adidas/3.webp"
+        }
+      ]
     }
   ],
   "Products": [

@@ -21,6 +21,8 @@ import productDetail from "../pages/productDetails/productDetails";
 
 export const router = new Navigo("/");
 
+
+
 export const changePages = (target) => {
     const root = document.getElementById("rootsEl");
     root.innerHTML = "";
@@ -88,7 +90,10 @@ router
     .on("/converse", ()=>{
         changePages2(Converse);
     })
-    .on("/singleproduct/:brands", (item)=>{
+    .on("/singleproduct/:id", (item)=>{
         changePages2(productDetail, item.data.id);
+    })
+    .on("/whishlist", ()=>{
+        changePages2(wishList);
     })
     
